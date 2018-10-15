@@ -1,6 +1,6 @@
 # Bad Lambda
 
-* Lambda function with API gateway
+Lambda function with API gateway
 * Returns the environment variables of container executing Lambda
 * Includes AWS security token details which can be used to assume Lambda role
 
