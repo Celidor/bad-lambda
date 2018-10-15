@@ -1,10 +1,10 @@
 resource "aws_lambda_function" "bad-lambda" {
-  filename         = "files/bad-lambda-dev-9322e8ba-fbba-4c52-ae92-a3b436da024e.zip"
+  filename         = "files/bad-lambda-dev-970b43c9-7b83-4ce3-aab0-cabc834cc8eb.zip"
   function_name    = "bad-lambda-${terraform.workspace}"
-  description      = "Deliberately vulnerable Lambda function - use with care"
+  description      = "Returns environment variables of container executing Lambda"
   role             = "${aws_iam_role.lambda_iam.arn}"
   handler          = "printenv.lambda_handler"
-  source_code_hash = "${base64sha256(file("files/bad-lambda-dev-9322e8ba-fbba-4c52-ae92-a3b436da024e.zip"))}"
+  source_code_hash = "${base64sha256(file("files/bad-lambda-dev-970b43c9-7b83-4ce3-aab0-cabc834cc8eb.zip"))}"
   runtime          = "python3.6"
   publish          = true
 

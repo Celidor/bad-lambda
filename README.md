@@ -1,6 +1,10 @@
 # Bad Lambda
 
-Deliberately vulnerable Lambda function with API gateway
+* Lambda function with API gateway
+* Returns the environment variables of container executing Lambda
+* Includes AWS security token details which can be used to assume Lambda role
+
+WARNING - this could lead to AWS account takeover if the Lambda role is excessive
 
 ## DEV environment
 
