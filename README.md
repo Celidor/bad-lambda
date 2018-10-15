@@ -4,7 +4,7 @@ Lambda function with API gateway
 * Returns the environment variables of container executing Lambda
 * Includes AWS security token details which can be used to assume Lambda role
 
-WARNING - this could lead to AWS account takeover if the Lambda role is excessive
+WARNING - could lead to AWS account takeover with excessive Lambda role policy permissions
 
 ## DEV environment
 
