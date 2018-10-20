@@ -8,7 +8,7 @@ Lambda function with API gateway and admin password in Secrets Manager
 # WARNING
 * Designed for security training purposes
 * Do not use on a production account
-* Do not use if you are already using AWS Secrets Manager
+* Do not use if you are using AWS Secrets Manager in the account
 * Could lead to AWS account takeover with excessive Lambda role policy permissions
 
 ## DEV environment
@@ -68,7 +68,7 @@ aws_access_key_id = ASIA2L5BHF3A7UTREF4P
 aws_secret_access_key = xohK8M33/0mDQhW5wWHcNY7QWFilxLSjIhhEXrUb+
 aws_session_token = FQoGZXIvYXdzEJv//////////wEaDGfc5TyNddb+xhFF7iLnAaCBanmzm8/PykwEKmyW0wVGklVYWvwXIMEIkwYApmscKwMlfDEeMtq1fRlMT6fHyuyC8lw36p9dTPn8awx2frzDgNBUUDB/XMth7J8CGz+k8qcRLjwZsihMpqHv2ikozqNP+JptvnPCD//FjBF1aomgkntLbY9qeTigvTTMVDjBjoat3zZyJGKylzOnkCZ/YTWr4wuU4071f/Rud+1szy4eKocJZavdnBhfFfknhakezCrJgVeR9X+JMnnFsEi6zhkn172GOibCbO07SSty7mY6HRb0gzB1w+8wGGroEthoj2NXB/aYYHijQ56veBQ==
 ```
-then use a recent latest version of the AWS command line interface:
+then use a recent version of the AWS command line interface:
 ```
 $ aws secretsmanager list-secrets --profile badlambda
 ```
