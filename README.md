@@ -8,7 +8,7 @@ Lambda function with API gateway and admin password in Secrets Manager
 # WARNING
 * Designed for security training purposes
 * Do not use on a production account
-* Do not use if you are using AWS Secrets Manager in the account
+* Do not deploy to an account with AWS Secrets Manager enabled
 * Could lead to AWS account takeover with excessive Lambda role policy permissions
 
 ## DEV environment
