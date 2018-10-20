@@ -30,22 +30,40 @@ resource "aws_iam_policy" "lambda_policy" {
   description = "Policy allows Lambda to write to CloudWatch"
   policy = <<EOF
 {
-   "Version": "2012-10-17",
-   "Statement":[
-     {
-      "Effect": "Allow",
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "logs:DescribeLogGroups",
-        "logs:DescribeLogStreams"
+  "Version": "2012-10-17",
+  "Statement":[
+    {
+    "Effect": "Allow",
+    "Action": [
+      "logs:CreateLogGroup",
+      "logs:CreateLogStream",
+      "logs:PutLogEvents",
+      "logs:DescribeLogGroups",
+      "logs:DescribeLogStreams"
+    ],
+    "Resource": [
+      "arn:aws:logs:*:*:*"
+      ]
+    },
+    {
+    "Effect": "Allow",
+    "Action": [
+      "secretsmanager:GetResourcePolicy",
+      "secretsmanager:GetSecretValue",
+      "secretsmanager:DescribeSecret",
+      "secretsmanager:ListSecretVersionIds"
+    ],
+    "Resource": "arn:aws:secretsmanager:eu-west-1:*:secret:admin-password-*"
+    },
+    {
+    "Effect": "Allow",
+    "Action": [
+      "secretsmanager:GetRandomPassword",
+      "secretsmanager:ListSecrets"
       ],
-      "Resource": [
-        "arn:aws:logs:*:*:*"
-        ]
-     }
-   ]
+    "Resource": "*"
+    }
+  ]
 }
 EOF
 }
