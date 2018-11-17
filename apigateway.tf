@@ -1,5 +1,5 @@
 resource "aws_api_gateway_rest_api" "bad-lambda" {
-  name        = "bad-labmda-gateway"
+  name        = "bad-lambda-gateway"
   description = "API Gateway for deliberately vulnerable lambda function"
 }
 
